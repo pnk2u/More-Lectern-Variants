@@ -1,0 +1,12 @@
+{
+  "required": true ,
+  "package": "com.pnku.mlv.mixin" ,
+  "compatibilityLevel": "JAVA_21" ,
+  "mixins": [
+    "PointOfInterestTypesAccessor"
+  ] ,
+  "injectors": {
+    "defaultRequire": 1
+  } ,
+  "minVersion": "0.8"
+}
