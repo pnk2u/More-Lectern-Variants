@@ -4,12 +4,15 @@
   "key": {
     "#": {
       "item": "minecraft:acacia_slab"
-    }
+    },
+     "B": {
+       "item": "minecraft:bookshelf"
+     }
         },
-  "pattern":  [
-  "# #",
-  "# #",
-  "###"
+   "pattern":  [
+  "###",
+  " B ",
+  " # "
  ],
   "result": {
     "count": 1,
