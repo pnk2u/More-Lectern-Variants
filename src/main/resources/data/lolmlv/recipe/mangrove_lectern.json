@@ -4,12 +4,14 @@
   "key": {
     "#": {
       "item": "minecraft:mangrove_slab"
-    }
-        },
-  "pattern":  [
-  "# #",
-  "# #",
-  "###"
+    },
+     "B": {
+       "item": "minecraft:bookshelf"
+     }        },
+   "pattern":  [
+  "###",
+  " B ",
+  " # "
  ],
   "result": {
     "count": 1,
