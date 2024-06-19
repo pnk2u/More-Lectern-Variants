@@ -6,8 +6,9 @@
       "item": "minecraft:spruce_slab"
     },
      "B": {
-       "item": "minecraft:bookshelf"
-     }        },
+       "tag": "c:bookshelves"
+     }
+        },
    "pattern":  [
   "###",
   " B ",
