@@ -6,7 +6,7 @@
       "item": "minecraft:acacia_slab"
     },
      "B": {
-       "item": "minecraft:bookshelf"
+       "tag": "c:bookshelves"
      }
         },
    "pattern":  [
