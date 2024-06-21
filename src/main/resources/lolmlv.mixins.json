@@ -3,7 +3,10 @@
   "package": "de.pnku.mlv.mixin" ,
   "compatibilityLevel": "JAVA_17" ,
   "mixins": [
-    "PoiTypesAccessor"
+    "BlockEntityTypeMixin" ,
+    "PoiTypesAccessor",
+    "WritableBookItemMixin" ,
+    "WrittenBookItemMixin"
   ] ,
   "injectors": {
     "defaultRequire": 1
