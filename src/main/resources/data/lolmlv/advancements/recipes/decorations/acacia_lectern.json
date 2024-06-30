@@ -1,13 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_lots_of_items": {
+    "has_book": {
       "conditions": {
-        "slots": {
-          "occupied": {
-            "min": 10
+        "items": [
+          {
+            "items": "minecraft:book"
           }
-        }
+        ]
       },
       "trigger": "minecraft:inventory_changed"
     },
@@ -32,7 +32,7 @@
   },
   "requirements": [
     [
-      "has_lots_of_items",
+      "has_book",
       "has_the_recipe"
     ],
     [

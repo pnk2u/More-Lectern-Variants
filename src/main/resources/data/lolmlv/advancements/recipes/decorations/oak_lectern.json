@@ -1,13 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_lots_of_items": {
+    "has_book": {
       "conditions": {
-        "slots": {
-          "occupied": {
-            "min": 10
-          }
-        }
+        "items": [
+         {
+           "items": "minecraft:book"
+         }
+       ]
       },
       "trigger": "minecraft:inventory_changed"
     },
@@ -25,14 +25,14 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "lolmlv:oak_lectern"
+        "recipe": "lolmlv:vanilla_lectern_from_oak_recipe"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_lots_of_items",
+      "has_book",
       "has_the_recipe"
     ],
     [
