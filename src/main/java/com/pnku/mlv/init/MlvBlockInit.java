@@ -12,7 +12,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MlvBlockInit {
-    public static final MoreLecternBlock OAK_LECTERN = new MoreLecternBlock(MapColor.OAK_TAN, "oak");
     public static final MoreLecternBlock SPRUCE_LECTERN = new MoreLecternBlock(MapColor.SPRUCE_BROWN, "spruce");
     public static final MoreLecternBlock BIRCH_LECTERN = new MoreLecternBlock(MapColor.PALE_YELLOW, "birch");
     public static final MoreLecternBlock JUNGLE_LECTERN = new MoreLecternBlock(MapColor.DIRT_BROWN, "jungle");
@@ -28,7 +27,6 @@ public class MlvBlockInit {
 
 
     public static void registerBlocks() {
-        registerBlock(OAK_LECTERN);
         registerBlock(SPRUCE_LECTERN);
         registerBlock(BIRCH_LECTERN);
         registerBlock(JUNGLE_LECTERN);

@@ -11,7 +11,6 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 
 public class MlvItemInit {
-    public static final BlockItem OAK_LECTERN_I = new BlockItem(MlvBlockInit.OAK_LECTERN, new Item.Settings());
     public static final BlockItem SPRUCE_LECTERN_I = new BlockItem(MlvBlockInit.SPRUCE_LECTERN, new Item.Settings());
     public static final BlockItem BIRCH_LECTERN_I = new BlockItem(MlvBlockInit.BIRCH_LECTERN, new Item.Settings());
     public static final BlockItem JUNGLE_LECTERN_I = new BlockItem(MlvBlockInit.JUNGLE_LECTERN, new Item.Settings());
@@ -25,8 +24,7 @@ public class MlvItemInit {
 
 
     public static void registerItems() {
-        registerItem(OAK_LECTERN_I, Items.LECTERN);
-        registerItem(SPRUCE_LECTERN_I, OAK_LECTERN_I);
+        registerItem(SPRUCE_LECTERN_I, Items.LECTERN);
         registerItem(BIRCH_LECTERN_I, SPRUCE_LECTERN_I);
         registerItem(JUNGLE_LECTERN_I, BIRCH_LECTERN_I);
         registerItem(ACACIA_LECTERN_I, JUNGLE_LECTERN_I);
