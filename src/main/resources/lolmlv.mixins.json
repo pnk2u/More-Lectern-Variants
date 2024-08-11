@@ -1,9 +1,9 @@
 {
   "required": true ,
-  "package": "com.pnku.mlv.mixin" ,
+  "package": "de.pnku.mlv.mixin" ,
   "compatibilityLevel": "JAVA_21" ,
   "mixins": [
-    "PointOfInterestTypesAccessor"
+    "PoiTypesAccessor"
   ] ,
   "injectors": {
     "defaultRequire": 1
