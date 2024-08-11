@@ -8,7 +8,7 @@
 		"${mod_authors}"
 	],
 	"contact": {
-		"homepage": "https://lieonlion.github.io/LieOnLion/",
+		"homepage": "https://pnku.de",
 		"sources": "https://github.com/pnk2u/More-Lectern-Variants",
 		"issues": "https://github.com/pnk2u/More-Lectern-Variants/issues"
 	},
@@ -17,7 +17,7 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-          "com.pnku.mlv.MoreLecternVariants"
+          "de.pnku.mlv.MoreLecternVariants"
 		]
 	},
 	"mixins": [
@@ -33,7 +33,6 @@
 	"custom": {
 		"modmenu": {
 			"links": {
-				"modmenu.youtube": "https://www.youtube.com/@lieonlion?sub_confirmation=1",
 				"modmenu.discord": "https://discord.com/invite/sA42pp6cuX"
 			}
 		}
