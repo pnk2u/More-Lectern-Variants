@@ -10,12 +10,12 @@ public class MoreLecternBlock extends LecternBlock {
     public final String lecternWoodType;
 
     public MoreLecternBlock(MapColor colour, String lecternWoodType) {
-        super(Properties.ofFullCopy(Blocks.LECTERN).mapColor(colour));
+        super(Properties.copy(Blocks.LECTERN).mapColor(colour));
         this.lecternWoodType = lecternWoodType;
     }
 
     public MoreLecternBlock(MapColor colour, SoundType soundType, String lecternWoodType) {
-        super(Properties.ofFullCopy(Blocks.LECTERN).mapColor(colour).sound(soundType));
+        super(Properties.copy(Blocks.LECTERN).mapColor(colour).sound(soundType));
         this.lecternWoodType = lecternWoodType;
     }
 }
