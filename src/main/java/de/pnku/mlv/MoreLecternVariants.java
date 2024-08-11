@@ -1,10 +1,10 @@
-package com.pnku.mlv;
+package de.pnku.mlv;
 
-import com.pnku.mlv.init.MlvBlockInit;
-import com.pnku.mlv.init.MlvItemInit;
-import com.pnku.mlv.poi.MlvPointOfInterestTypes;
+import de.pnku.mlv.init.MlvBlockInit;
+import de.pnku.mlv.init.MlvItemInit;
+import de.pnku.mlv.poi.MlvPointOfInterestTypes;
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.util.Identifier;
+import net.minecraft.resources.ResourceLocation;
 
 public class MoreLecternVariants implements ModInitializer {
     public static final String MODID = "lolmlv";
@@ -16,7 +16,7 @@ public class MoreLecternVariants implements ModInitializer {
         MlvPointOfInterestTypes.init();
     }
 
-    public static Identifier asId(String path) {
-        return Identifier.of(MODID, path);
+    public static ResourceLocation asId(String path) {
+        return new ResourceLocation(MODID, path);
     }
 }

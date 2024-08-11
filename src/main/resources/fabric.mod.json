@@ -17,7 +17,7 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-          "com.pnku.mlv.MoreLecternVariants"
+          "de.pnku.mlv.MoreLecternVariants"
 		]
 	},
 	"mixins": [
