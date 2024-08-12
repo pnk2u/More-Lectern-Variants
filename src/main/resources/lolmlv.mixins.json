@@ -3,6 +3,7 @@
   "package": "de.pnku.mlv.mixin" ,
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "BlockEntityTypeMixin" ,
     "PoiTypesAccessor"
   ] ,
   "injectors": {
