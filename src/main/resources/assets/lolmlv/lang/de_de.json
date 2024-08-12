@@ -8,5 +8,15 @@
   "block.lolmlv.cherry_lectern": "Kirschholzlesepult" ,
   "block.lolmlv.bamboo_lectern": "Bambuslesepult" ,
   "block.lolmlv.crimson_lectern": "Karmesinlesepult" ,
-  "block.lolmlv.warped_lectern": "Wirrlesepult"
+  "block.lolmlv.warped_lectern": "Wirrlesepult",
+  "container.spruce_lectern": "Fichtenholzlesepult" ,
+  "container.birch_lectern": "Birkenholzlesepult" ,
+  "container.jungle_lectern": "Tropenholzlesepult" ,
+  "container.acacia_lectern": "Akazienholzlesepult" ,
+  "container.dark_oak_lectern": "Schwarzeichenholzlesepult" ,
+  "container.mangrove_lectern": "Mangrovenholzlesepult" ,
+  "container.cherry_lectern": "Kirschholzlesepult" ,
+  "container.bamboo_lectern": "Bambuslesepult" ,
+  "container.crimson_lectern": "Karmesinlesepult" ,
+  "container.warped_lectern": "Wirrlesepult"
 }
