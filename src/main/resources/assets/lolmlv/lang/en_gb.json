@@ -8,5 +8,15 @@
   "block.lolmlv.cherry_lectern": "Cherry Lectern" ,
   "block.lolmlv.bamboo_lectern": "Bamboo Lectern" ,
   "block.lolmlv.crimson_lectern": "Crimson Lectern" ,
-  "block.lolmlv.warped_lectern": "Warped Lectern"
+  "block.lolmlv.warped_lectern": "Warped Lectern",
+  "container.spruce_lectern": "Spruce Lectern" ,
+  "container.birch_lectern": "Birch Lectern" ,
+  "container.jungle_lectern": "Jungle Lectern" ,
+  "container.acacia_lectern": "Acacia Lectern" ,
+  "container.dark_oak_lectern": "Dark Oak Lectern" ,
+  "container.mangrove_lectern": "Mangrove Lectern" ,
+  "container.cherry_lectern": "Cherry Lectern" ,
+  "container.bamboo_lectern": "Bamboo Lectern" ,
+  "container.crimson_lectern": "Crimson Lectern" ,
+  "container.warped_lectern": "Warped Lectern"
 }

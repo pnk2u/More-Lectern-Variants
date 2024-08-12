@@ -2,10 +2,15 @@ package de.pnku.mlv.init;
 
 import de.pnku.mlv.MoreLecternVariants;
 import de.pnku.mlv.block.MoreLecternBlock;
+import de.pnku.mlv.block.MoreLecternBlockEntity;
+import de.pnku.mlv.client.render.MoreLecternRenderer;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.material.MapColor;
 
 import java.util.ArrayList;
@@ -23,6 +28,8 @@ public class MlvBlockInit {
     public static final MoreLecternBlock CRIMSON_LECTERN = new MoreLecternBlock(MapColor.CRIMSON_STEM, SoundType.NETHER_WOOD, "crimson");
     public static final MoreLecternBlock WARPED_LECTERN = new MoreLecternBlock(MapColor.WARPED_STEM, SoundType.NETHER_WOOD, "warped");
 
+    public static BlockEntityType<MoreLecternBlockEntity> MORE_LECTERN_BLOCK_ENTITY;
+
     public static final List<Block> more_lecterns = new ArrayList<>();
 
 
@@ -38,6 +45,8 @@ public class MlvBlockInit {
         registerBlock(CRIMSON_LECTERN);
         registerBlock(WARPED_LECTERN);
 
+        MORE_LECTERN_BLOCK_ENTITY = Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, MoreLecternVariants.asId("more_lectern_variant"), BlockEntityType.Builder.of(MoreLecternBlockEntity::new, MlvBlockInit.more_lecterns.toArray(Block[]::new)).build());
+        BlockEntityRenderers.register(MORE_LECTERN_BLOCK_ENTITY, MoreLecternRenderer::new);
     }
 
     private static void registerBlock(MoreLecternBlock lectern) {
