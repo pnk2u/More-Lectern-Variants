@@ -19,6 +19,9 @@
 	"entrypoints": {
 		"main": [
           "de.pnku.mlv.MoreLecternVariants"
+		],
+		"client": [
+			"de.pnku.mlv.MoreLecternVariantsClient"
 		]
 	},
 	"mixins": [

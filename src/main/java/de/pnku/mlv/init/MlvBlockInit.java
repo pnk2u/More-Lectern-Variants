@@ -3,9 +3,6 @@ package de.pnku.mlv.init;
 import de.pnku.mlv.MoreLecternVariants;
 import de.pnku.mlv.block.MoreLecternBlock;
 import de.pnku.mlv.block.MoreLecternBlockEntity;
-import de.pnku.mlv.client.render.MoreLecternRenderer;
-import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
-import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.Block;
@@ -46,7 +43,6 @@ public class MlvBlockInit {
         registerBlock(WARPED_LECTERN);
 
         MORE_LECTERN_BLOCK_ENTITY = Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, MoreLecternVariants.asId("more_lectern_variant"), BlockEntityType.Builder.of(MoreLecternBlockEntity::new, MlvBlockInit.more_lecterns.toArray(Block[]::new)).build());
-        BlockEntityRenderers.register(MORE_LECTERN_BLOCK_ENTITY, MoreLecternRenderer::new);
     }
 
     private static void registerBlock(MoreLecternBlock lectern) {
