@@ -13,9 +13,12 @@ import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.blockentity.EnchantTableRenderer;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.state.BlockState;
+
+import static de.pnku.mlv.init.MlvBlockInit.MORE_LECTERN_BLOCK_ENTITY;
 
 @Environment(EnvType.CLIENT)
 public class MoreLecternRenderer implements BlockEntityRenderer<MoreLecternBlockEntity> {
@@ -39,6 +42,10 @@ public class MoreLecternRenderer implements BlockEntityRenderer<MoreLecternBlock
             this.bookModel.render(poseStack, vertexConsumer, packedLight, packedOverlay, -1);
             poseStack.popPose();
         }
+    }
+
+    public static void registerMoreLecternRenderer(){
+        BlockEntityRenderers.register(MORE_LECTERN_BLOCK_ENTITY, MoreLecternRenderer::new);
     }
 }
 

@@ -9,6 +9,7 @@
 	],
 	"contact": {
 		"homepage": "https://pnku.de",
+		"email": "contact@pnku.de",
 		"sources": "https://github.com/pnk2u/More-Lectern-Variants",
 		"issues": "https://github.com/pnk2u/More-Lectern-Variants/issues"
 	},
@@ -18,6 +19,9 @@
 	"entrypoints": {
 		"main": [
           "de.pnku.mlv.MoreLecternVariants"
+		],
+		"client": [
+			"de.pnku.mlv.MoreLecternVariantsClient"
 		]
 	},
 	"mixins": [
