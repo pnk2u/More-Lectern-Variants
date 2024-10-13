@@ -9,7 +9,7 @@
     },
     "textures": {
         "particle": "lolmlv:block/mangrove_lectern_sides",
-        "bottom": "block/oak_planks",
+        "bottom": "block/mangrove_planks",
         "base": "lolmlv:block/mangrove_lectern_base",
         "front": "lolmlv:block/mangrove_lectern_front",
         "sides": "lolmlv:block/mangrove_lectern_sides",

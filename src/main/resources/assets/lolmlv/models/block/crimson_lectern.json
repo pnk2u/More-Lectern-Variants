@@ -9,7 +9,7 @@
     },
     "textures": {
         "particle": "lolmlv:block/crimson_lectern_sides",
-        "bottom": "block/oak_planks",
+        "bottom": "block/crimson_planks",
         "base": "lolmlv:block/crimson_lectern_base",
         "front": "lolmlv:block/crimson_lectern_front",
         "sides": "lolmlv:block/crimson_lectern_sides",
