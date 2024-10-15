@@ -21,9 +21,9 @@ public class MlvPointOfInterestTypes {
                 .getPointOfInterestStatesToType();
 
         Holder<PoiType> librarianEntry = BuiltInRegistries.POINT_OF_INTEREST_TYPE
-                .getHolder(PoiTypes.LIBRARIAN).get();
+                .get(PoiTypes.LIBRARIAN).get();
 
-        PoiType librarianPoiType = BuiltInRegistries.POINT_OF_INTEREST_TYPE.get(PoiTypes.LIBRARIAN);
+        PoiType librarianPoiType = BuiltInRegistries.POINT_OF_INTEREST_TYPE.getValue(PoiTypes.LIBRARIAN);
 
         List<BlockState> librarianBlockStates = new ArrayList<BlockState>(librarianPoiType.matchingStates);
 

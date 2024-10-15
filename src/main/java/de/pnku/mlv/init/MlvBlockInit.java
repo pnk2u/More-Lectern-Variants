@@ -3,6 +3,7 @@ package de.pnku.mlv.init;
 import de.pnku.mlv.MoreLecternVariants;
 import de.pnku.mlv.block.MoreLecternBlock;
 import de.pnku.mlv.block.MoreLecternBlockEntity;
+import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.Block;
@@ -10,8 +11,7 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.material.MapColor;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class MlvBlockInit {
     public static final MoreLecternBlock SPRUCE_LECTERN = new MoreLecternBlock(MapColor.PODZOL, "spruce");
@@ -42,7 +42,13 @@ public class MlvBlockInit {
         registerBlock(CRIMSON_LECTERN);
         registerBlock(WARPED_LECTERN);
 
-        MORE_LECTERN_BLOCK_ENTITY = Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, MoreLecternVariants.asId("more_lectern_variant"), BlockEntityType.Builder.of(MoreLecternBlockEntity::new, MlvBlockInit.more_lecterns.toArray(Block[]::new)).build());
+        MORE_LECTERN_BLOCK_ENTITY =
+                Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE,
+                        MoreLecternVariants.asId("more_lectern_variant"),
+                        FabricBlockEntityTypeBuilder.create(MoreLecternBlockEntity::new)
+                                .addBlocks(SPRUCE_LECTERN, BIRCH_LECTERN, JUNGLE_LECTERN, ACACIA_LECTERN, DARK_OAK_LECTERN, MANGROVE_LECTERN, CHERRY_LECTERN, BAMBOO_LECTERN, CRIMSON_LECTERN, WARPED_LECTERN, WARPED_LECTERN)
+                                .build());
+        //MORE_LECTERN_BLOCK_ENTITY = Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, MoreLecternVariants.asId("more_lectern_variant"), BlockEntityType<MoreLecternBlockEntity>(MlvBlockInit.MORE_LECTERN_BLOCK_ENTITY, MlvBlockInit.more_lecterns_set));
     }
 
     private static void registerBlock(MoreLecternBlock lectern) {

@@ -39,7 +39,7 @@ public class MoreLecternRenderer implements BlockEntityRenderer<MoreLecternBlock
             poseStack.translate(0.0F, -0.125F, 0.0F);
             this.bookModel.setupAnim(0.0F, 0.1F, 0.9F, 1.2F);
             VertexConsumer vertexConsumer = EnchantTableRenderer.BOOK_LOCATION.buffer(bufferSource, RenderType::entitySolid);
-            this.bookModel.render(poseStack, vertexConsumer, packedLight, packedOverlay, -1);
+            this.bookModel.renderToBuffer(poseStack, vertexConsumer, packedLight, packedOverlay, -1);
             poseStack.popPose();
         }
     }
