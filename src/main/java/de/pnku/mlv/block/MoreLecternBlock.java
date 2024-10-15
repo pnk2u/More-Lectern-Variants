@@ -3,13 +3,14 @@ package de.pnku.mlv.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
@@ -20,7 +21,6 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.LecternBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.LecternBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.level.material.MapColor;
@@ -28,16 +28,18 @@ import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import static de.pnku.mlv.MoreLecternVariants.asId;
+
 public class MoreLecternBlock extends LecternBlock {
     public final String lecternWoodType;
 
     public MoreLecternBlock(MapColor colour, String lecternWoodType) {
-        super(Properties.ofFullCopy(Blocks.LECTERN).mapColor(colour));
+        super(Properties.ofFullCopy(Blocks.LECTERN).mapColor(colour).setId(ResourceKey.create(Registries.BLOCK, asId(lecternWoodType + "_lectern"))));
         this.lecternWoodType = lecternWoodType;
     }
 
     public MoreLecternBlock(MapColor colour, SoundType soundType, String lecternWoodType) {
-        super(Properties.ofFullCopy(Blocks.LECTERN).mapColor(colour).sound(soundType));
+        super(Properties.ofFullCopy(Blocks.LECTERN).mapColor(colour).setId(ResourceKey.create(Registries.BLOCK, asId(lecternWoodType + "_lectern"))).sound(soundType));
         this.lecternWoodType = lecternWoodType;
     }
 
@@ -112,13 +114,13 @@ public class MoreLecternBlock extends LecternBlock {
     }
 
     @Override
-    protected @NotNull ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
-        if ((Boolean)state.getValue(HAS_BOOK)) {
-            return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
-        } else if (stack.is(ItemTags.LECTERN_BOOKS)) {
-            return tryPlaceBook(player, level, pos, state, stack) ? ItemInteractionResult.sidedSuccess(level.isClientSide) : ItemInteractionResult.SKIP_DEFAULT_BLOCK_INTERACTION;
+    protected @NotNull InteractionResult useItemOn(ItemStack itemStack, BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
+        if ((Boolean)blockState.getValue(HAS_BOOK)) {
+            return InteractionResult.TRY_WITH_EMPTY_HAND;
+        } else if (itemStack.is(ItemTags.LECTERN_BOOKS)) {
+            return (InteractionResult)(tryPlaceBook(player, level, blockPos, blockState, itemStack) ? InteractionResult.SUCCESS : InteractionResult.PASS);
         } else {
-            return stack.isEmpty() && hand == InteractionHand.MAIN_HAND ? ItemInteractionResult.SKIP_DEFAULT_BLOCK_INTERACTION : ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+            return (InteractionResult)(itemStack.isEmpty() && interactionHand == InteractionHand.MAIN_HAND ? InteractionResult.PASS : InteractionResult.TRY_WITH_EMPTY_HAND);
         }
     }
 
@@ -129,7 +131,7 @@ public class MoreLecternBlock extends LecternBlock {
                 this.openScreen(level, pos, player);
             }
 
-            return InteractionResult.sidedSuccess(level.isClientSide);
+            return InteractionResult.SUCCESS;
         } else {
             return InteractionResult.CONSUME;
         }
