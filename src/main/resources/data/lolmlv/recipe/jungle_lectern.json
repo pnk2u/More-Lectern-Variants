@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "lectern",
   "key": {
-    "#": {
-      "item": "minecraft:jungle_slab"
-    },
-     "B": {
-       "tag": "c:bookshelves"
-     }
+    "#": "minecraft:jungle_slab",
+     "B": "#c:bookshelves"
         },
    "pattern":  [
   "###",
