@@ -12,20 +12,27 @@ import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 
-public class MlvItemInit {
-    public static final BlockItem SPRUCE_LECTERN_I = new BlockItem(MlvBlockInit.SPRUCE_LECTERN, setProperties("spruce_lectern"));
-    public static final BlockItem BIRCH_LECTERN_I = new BlockItem(MlvBlockInit.BIRCH_LECTERN, setProperties("birch_lectern"));
-    public static final BlockItem JUNGLE_LECTERN_I = new BlockItem(MlvBlockInit.JUNGLE_LECTERN, setProperties("jungle_lectern"));
-    public static final BlockItem ACACIA_LECTERN_I = new BlockItem(MlvBlockInit.ACACIA_LECTERN, setProperties("acacia_lectern"));
-    public static final BlockItem DARK_OAK_LECTERN_I = new BlockItem(MlvBlockInit.DARK_OAK_LECTERN, setProperties("dark_oak_lectern"));
-    public static final BlockItem MANGROVE_LECTERN_I = new BlockItem(MlvBlockInit.MANGROVE_LECTERN, setProperties("mangrove_lectern"));
-    public static final BlockItem CHERRY_LECTERN_I = new BlockItem(MlvBlockInit.CHERRY_LECTERN, setProperties("cherry_lectern"));
-    public static final BlockItem BAMBOO_LECTERN_I = new BlockItem(MlvBlockInit.BAMBOO_LECTERN, setProperties("bamboo_lectern"));
-    public static final BlockItem CRIMSON_LECTERN_I = new BlockItem(MlvBlockInit.CRIMSON_LECTERN, setProperties("crimson_lectern"));
-    public static final BlockItem WARPED_LECTERN_I = new BlockItem(MlvBlockInit.WARPED_LECTERN, setProperties("warped_lectern"));
+import static de.pnku.mlv.init.MlvBlockInit.*;
 
-    public static Item.Properties setProperties(String name) {
-       return new Item.Properties().setId(ResourceKey.create(Registries.ITEM, MoreLecternVariants.asId(name)));
+public class MlvItemInit {
+    public static final BlockItem SPRUCE_LECTERN_I = itemFromBlock(SPRUCE_LECTERN);
+    public static final BlockItem BIRCH_LECTERN_I = itemFromBlock(BIRCH_LECTERN);
+    public static final BlockItem JUNGLE_LECTERN_I = itemFromBlock(JUNGLE_LECTERN);
+    public static final BlockItem ACACIA_LECTERN_I = itemFromBlock(ACACIA_LECTERN);
+    public static final BlockItem DARK_OAK_LECTERN_I = itemFromBlock(DARK_OAK_LECTERN);
+    public static final BlockItem MANGROVE_LECTERN_I = itemFromBlock(MANGROVE_LECTERN);
+    public static final BlockItem CHERRY_LECTERN_I = itemFromBlock(CHERRY_LECTERN);
+    public static final BlockItem BAMBOO_LECTERN_I = itemFromBlock(BAMBOO_LECTERN);
+    public static final BlockItem CRIMSON_LECTERN_I = itemFromBlock(CRIMSON_LECTERN);
+    public static final BlockItem WARPED_LECTERN_I = itemFromBlock(WARPED_LECTERN);
+
+    public static BlockItem itemFromBlock(MoreLecternBlock moreLecternBlock) {
+        return new BlockItem(moreLecternBlock, setProperties(moreLecternBlock));
+    }
+
+    public static Item.Properties setProperties(MoreLecternBlock moreLecternBlock) {
+        return new Item.Properties()
+                .setId(ResourceKey.create(Registries.ITEM,BuiltInRegistries.BLOCK.getKey(moreLecternBlock))).useBlockDescriptionPrefix();
     }
 
     public static void registerItems() {

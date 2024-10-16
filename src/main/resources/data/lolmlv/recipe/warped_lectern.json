@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "lectern",
   "key": {
-    "#": {
-      "item": "minecraft:warped_slab"
-    },
-     "B": {
-       "tag": "c:bookshelves"
-     }
+    "#": "minecraft:warped_slab",
+     "B": "#c:bookshelves"
         },
    "pattern":  [
   "###",

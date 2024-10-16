@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "lectern",
   "key": {
-    "#": {
-      "item": "minecraft:oak_slab"
-    },
-     "B": {
-       "tag": "c:bookshelves"
-     }
+    "#": "minecraft:oak_slab",
+     "B": "#c:bookshelves"
         },
    "pattern":  [
   "###",

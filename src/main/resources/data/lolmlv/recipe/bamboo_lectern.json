@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "lectern",
   "key": {
-    "#": {
-      "item": "minecraft:bamboo_slab"
-    },
-     "B": {
-       "tag": "c:bookshelves"
-     }
+    "#": "minecraft:bamboo_slab",
+     "B": "#c:bookshelves"
         },
    "pattern":  [
   "###",

@@ -1,9 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "lieonstudio:lecterns"
-    }
+    "#lieonstudio:lecterns"
   ],
   "result": {
     "count": 1,
