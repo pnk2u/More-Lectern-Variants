@@ -19,7 +19,7 @@ public class MlvBlockInit {
     public static final MoreLecternBlock JUNGLE_LECTERN = new MoreLecternBlock(MapColor.DIRT, "jungle");
     public static final MoreLecternBlock ACACIA_LECTERN = new MoreLecternBlock(MapColor.COLOR_ORANGE, "acacia");
     public static final MoreLecternBlock DARK_OAK_LECTERN = new MoreLecternBlock(MapColor.COLOR_BROWN, "dark_oak");
-    public static final MoreLecternBlock PALE_OAK_LECTERN = new MoreLecternBlock(MapColor.COLOR_BROWN, "pale_oak");
+    public static final MoreLecternBlock PALE_OAK_LECTERN = new MoreLecternBlock(MapColor.QUARTZ, "pale_oak");
     public static final MoreLecternBlock MANGROVE_LECTERN = new MoreLecternBlock(MapColor.COLOR_RED, "mangrove");
     public static final MoreLecternBlock CHERRY_LECTERN = new MoreLecternBlock(MapColor.TERRACOTTA_WHITE, SoundType.CHERRY_WOOD, "cherry");
     public static final MoreLecternBlock BAMBOO_LECTERN = new MoreLecternBlock(MapColor.COLOR_YELLOW, SoundType.BAMBOO_WOOD, "bamboo");
