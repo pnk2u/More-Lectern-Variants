@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "lectern",
+  "key": {
+    "#": "minecraft:pale_oak_slab",
+     "B": "#c:bookshelves"
+        },
+   "pattern":  [
+  "###",
+  " B ",
+  " # "
+ ],
+  "result": {
+    "count": 1,
+    "id": "lolmlv:pale_oak_lectern"
+  }
+}
