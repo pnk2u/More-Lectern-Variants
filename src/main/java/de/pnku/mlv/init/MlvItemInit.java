@@ -20,6 +20,7 @@ public class MlvItemInit {
     public static final BlockItem JUNGLE_LECTERN_I = itemFromBlock(JUNGLE_LECTERN);
     public static final BlockItem ACACIA_LECTERN_I = itemFromBlock(ACACIA_LECTERN);
     public static final BlockItem DARK_OAK_LECTERN_I = itemFromBlock(DARK_OAK_LECTERN);
+    public static final BlockItem PALE_OAK_LECTERN_I = itemFromBlock(PALE_OAK_LECTERN);
     public static final BlockItem MANGROVE_LECTERN_I = itemFromBlock(MANGROVE_LECTERN);
     public static final BlockItem CHERRY_LECTERN_I = itemFromBlock(CHERRY_LECTERN);
     public static final BlockItem BAMBOO_LECTERN_I = itemFromBlock(BAMBOO_LECTERN);
@@ -41,7 +42,8 @@ public class MlvItemInit {
         registerItem(JUNGLE_LECTERN_I, BIRCH_LECTERN_I);
         registerItem(ACACIA_LECTERN_I, JUNGLE_LECTERN_I);
         registerItem(DARK_OAK_LECTERN_I, ACACIA_LECTERN_I);
-        registerItem(MANGROVE_LECTERN_I, DARK_OAK_LECTERN_I);
+        registerItem(PALE_OAK_LECTERN_I, DARK_OAK_LECTERN_I);
+        registerItem(MANGROVE_LECTERN_I, PALE_OAK_LECTERN_I);
         registerItem(CHERRY_LECTERN_I, MANGROVE_LECTERN_I);
         registerItem(BAMBOO_LECTERN_I, CHERRY_LECTERN_I);
         registerItem(CRIMSON_LECTERN_I, BAMBOO_LECTERN_I);
