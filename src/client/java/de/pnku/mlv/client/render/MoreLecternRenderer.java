@@ -17,6 +17,7 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.blockentity.EnchantTableRenderer;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.Vec3;
 
 import static de.pnku.mlv.init.MlvBlockInit.MORE_LECTERN_BLOCK_ENTITY;
 
@@ -28,7 +29,7 @@ public class MoreLecternRenderer implements BlockEntityRenderer<MoreLecternBlock
         this.bookModel = new BookModel(context.bakeLayer(ModelLayers.BOOK));
     }
 
-    public void render(MoreLecternBlockEntity blockEntity, float partialTick, PoseStack poseStack, MultiBufferSource bufferSource, int packedLight, int packedOverlay) {
+    public void render(MoreLecternBlockEntity blockEntity, float partialTick, PoseStack poseStack, MultiBufferSource bufferSource, int packedLight, int packedOverlay, Vec3 vec3) {
         BlockState blockState = blockEntity.getBlockState();
         if ((Boolean)blockState.getValue(MoreLecternBlock.HAS_BOOK)) {
             poseStack.pushPose();

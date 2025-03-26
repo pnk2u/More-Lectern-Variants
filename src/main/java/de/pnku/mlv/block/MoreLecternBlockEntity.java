@@ -7,7 +7,10 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.NbtOps;
+import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.RegistryOps;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.Mth;
 import net.minecraft.world.Clearable;
@@ -178,16 +181,16 @@ public class MoreLecternBlockEntity extends BlockEntity implements Clearable, Me
     }
 
     private ItemStack resolveBook(ItemStack stack, @Nullable Player player) {
-        if (this.level instanceof ServerLevel && stack.is(Items.WRITTEN_BOOK)) {
-            WrittenBookItem.resolveBookComponents(stack, this.createCommandSourceStack(player), player);
+        if (this.level instanceof ServerLevel serverLevel) {
+            WrittenBookContent.resolveForItem(stack, this.createCommandSourceStack(player, serverLevel), player);
         }
 
         return stack;
     }
 
-    private CommandSourceStack createCommandSourceStack(@Nullable Player player) {
+    private CommandSourceStack createCommandSourceStack(@Nullable Player player, ServerLevel level) {
         String string;
-        Object component;
+        Component component;
         if (player == null) {
             string = "Lectern";
             component = Component.literal("Lectern");
@@ -197,7 +200,7 @@ public class MoreLecternBlockEntity extends BlockEntity implements Clearable, Me
         }
 
         Vec3 vec3 = Vec3.atCenterOf(this.worldPosition);
-        return new CommandSourceStack(CommandSource.NULL, vec3, Vec2.ZERO, (ServerLevel)this.level, 2, string, (Component)component, this.level.getServer(), player);
+        return new CommandSourceStack(CommandSource.NULL, vec3, Vec2.ZERO, level, 2, string, component, level.getServer(), player);
     }
 
     public boolean onlyOpCanSetNbt() {
@@ -207,14 +210,10 @@ public class MoreLecternBlockEntity extends BlockEntity implements Clearable, Me
     @Override
     protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
         super.loadAdditional(tag, registries);
-        if (tag.contains("Book", 10)) {
-            this.book = this.resolveBook((ItemStack)ItemStack.parse(registries, tag.getCompound("Book")).orElse(ItemStack.EMPTY), (Player)null);
-        } else {
-            this.book = ItemStack.EMPTY;
-        }
-
+        RegistryOps<Tag> registryOps = registries.createSerializationContext(NbtOps.INSTANCE);
+        this.book = (ItemStack)tag.read("Book", ItemStack.CODEC, registryOps).map(itemStack -> this.resolveBook(itemStack, null)).orElse(ItemStack.EMPTY);
         this.pageCount = getPageCount(this.book);
-        this.page = Mth.clamp(tag.getInt("Page"), 0, this.pageCount - 1);
+        this.page = Mth.clamp(tag.getIntOr("Page", 0), 0, this.pageCount - 1);
     }
 
     @Override
