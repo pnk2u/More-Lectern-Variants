@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "lieonstudio:lecterns"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:lectern"
+  }
+}
