@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "description": {"translate":  "resourcePack.lolmlv.mlecternv-quad-compat.description"},
+    "pack_format": 34,
+    "supported_formats": {
+      "min_inclusive": 15,
+      "max_inclusive": 58
+    }
+  }
+}

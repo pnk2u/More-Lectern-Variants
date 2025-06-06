@@ -37,7 +37,7 @@ public class MlvItemInit {
     }
 
     private static void registerItem(BlockItem lectern, Item lecternAfter) {
-        Registry.register(BuiltInRegistries.ITEM, MoreLecternVariants.asId(((MoreLecternBlock) lectern.getBlock()).lecternWoodType + "_lectern"), lectern);
+        Registry.register(BuiltInRegistries.ITEM, MoreLecternVariants.withModId(((MoreLecternBlock) lectern.getBlock()).lecternWoodType + "_lectern"), lectern);
 
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> entries.addAfter(lecternAfter, lectern));
     }
