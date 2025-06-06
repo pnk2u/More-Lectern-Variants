@@ -10,6 +10,7 @@
   "block.lolmlv.bamboo_lectern": "Bamboo Lectern" ,
   "block.lolmlv.crimson_lectern": "Crimson Lectern" ,
   "block.lolmlv.warped_lectern": "Warped Lectern",
+  "resourcePack.lolmlv.mlecternv-quad-compat.description": "Fixes a crafting recipe incompatibility with Quad.",
   "container.spruce_lectern": "Spruce Lectern" ,
   "container.birch_lectern": "Birch Lectern" ,
   "container.jungle_lectern": "Jungle Lectern" ,
