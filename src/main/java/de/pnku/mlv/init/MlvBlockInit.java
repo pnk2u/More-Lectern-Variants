@@ -46,7 +46,7 @@ public class MlvBlockInit {
 
         MORE_LECTERN_BLOCK_ENTITY =
                 Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE,
-                        MoreLecternVariants.asId("more_lectern_variant"),
+                        MoreLecternVariants.withModId("more_lectern_variant"),
                         FabricBlockEntityTypeBuilder.create(MoreLecternBlockEntity::new)
                                 .addBlocks(MlvBlockInit.more_lecterns.toArray(Block[]::new))
                                 .build());

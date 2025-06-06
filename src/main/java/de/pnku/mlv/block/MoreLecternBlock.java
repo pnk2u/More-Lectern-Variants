@@ -28,18 +28,18 @@ import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import static de.pnku.mlv.MoreLecternVariants.asId;
+import static de.pnku.mlv.MoreLecternVariants.withModId;
 
 public class MoreLecternBlock extends LecternBlock {
     public final String lecternWoodType;
 
     public MoreLecternBlock(MapColor colour, String lecternWoodType) {
-        super(Properties.ofFullCopy(Blocks.LECTERN).mapColor(colour).setId(ResourceKey.create(Registries.BLOCK, asId(lecternWoodType + "_lectern"))));
+        super(Properties.ofFullCopy(Blocks.LECTERN).mapColor(colour).setId(ResourceKey.create(Registries.BLOCK, withModId(lecternWoodType + "_lectern"))));
         this.lecternWoodType = lecternWoodType;
     }
 
     public MoreLecternBlock(MapColor colour, SoundType soundType, String lecternWoodType) {
-        super(Properties.ofFullCopy(Blocks.LECTERN).mapColor(colour).setId(ResourceKey.create(Registries.BLOCK, asId(lecternWoodType + "_lectern"))).sound(soundType));
+        super(Properties.ofFullCopy(Blocks.LECTERN).mapColor(colour).setId(ResourceKey.create(Registries.BLOCK, withModId(lecternWoodType + "_lectern"))).sound(soundType));
         this.lecternWoodType = lecternWoodType;
     }
 
