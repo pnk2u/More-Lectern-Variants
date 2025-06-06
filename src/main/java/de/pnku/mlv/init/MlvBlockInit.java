@@ -41,7 +41,7 @@ public class MlvBlockInit {
     }
 
     private static void registerBlock(MoreLecternBlock lectern) {
-        Registry.register(BuiltInRegistries.BLOCK, MoreLecternVariants.asId(lectern.lecternWoodType + "_lectern"), lectern);
+        Registry.register(BuiltInRegistries.BLOCK, MoreLecternVariants.withModId(lectern.lecternWoodType + "_lectern"), lectern);
         more_lecterns.add(lectern);
     }
 }
