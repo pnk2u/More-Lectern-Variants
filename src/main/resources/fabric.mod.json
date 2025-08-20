@@ -14,7 +14,7 @@
 		"issues": "https://github.com/pnk2u/More-Lectern-Variants/issues"
 	},
 	"license": "${mod_license}",
-	"icon": "logo.png",
+	"icon": "icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
@@ -36,6 +36,13 @@
 			"links": {
 				"modmenu.discord": "https://dsc.lieonlion.dev"
 			}
+		},
+		"mc-publish": {
+			"modrinth": "pLsa93bN",
+			"curseforge": "1058412",
+			"dependencies": [
+				"fabric-api(required)#(ignore)"
+			]
 		}
 	}
 }
