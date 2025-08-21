@@ -39,3 +39,4 @@
   > If you have - since installing this mod - crafted **_Oak Lecterns_** specifically, they **_will get removed_**. Before installing this update, you can craft modded oak lecterns back into vanilla lecterns by simply putting them in a crafting grid.
 ### 1.5.4:
 - Fix 1.20.1/4 versions being compiled with Java 21, now they are compatible with Java 17 just like the vanilla game version they are based on
+ 

@@ -1,4 +1,4 @@
-<!--publish=false-->
+<!--publish=true-->
 ## 1.9.0:
 - `1.21.4⁺`: Fix books not dropping when breaking a Lectern
 - `1.21.6⁺`: Fix books not being able to be read on Lecterns
