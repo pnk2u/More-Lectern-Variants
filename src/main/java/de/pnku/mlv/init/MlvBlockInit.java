@@ -2,13 +2,10 @@ package de.pnku.mlv.init;
 
 import de.pnku.mlv.MoreLecternVariants;
 import de.pnku.mlv.block.MoreLecternBlock;
-import de.pnku.mlv.block.MoreLecternBlockEntity;
-import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.material.MapColor;
 
 import java.util.*;
@@ -25,9 +22,6 @@ public class MlvBlockInit {
     public static final MoreLecternBlock BAMBOO_LECTERN = new MoreLecternBlock(MapColor.COLOR_YELLOW, SoundType.BAMBOO_WOOD, "bamboo");
     public static final MoreLecternBlock CRIMSON_LECTERN = new MoreLecternBlock(MapColor.CRIMSON_STEM, SoundType.NETHER_WOOD, "crimson");
     public static final MoreLecternBlock WARPED_LECTERN = new MoreLecternBlock(MapColor.WARPED_STEM, SoundType.NETHER_WOOD, "warped");
-
-    public static BlockEntityType<MoreLecternBlockEntity> MORE_LECTERN_BLOCK_ENTITY;
-
     public static final List<Block> more_lecterns = new ArrayList<>();
 
 
@@ -43,13 +37,6 @@ public class MlvBlockInit {
         registerBlock(BAMBOO_LECTERN);
         registerBlock(CRIMSON_LECTERN);
         registerBlock(WARPED_LECTERN);
-
-        MORE_LECTERN_BLOCK_ENTITY =
-                Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE,
-                        MoreLecternVariants.withModId("more_lectern_variant"),
-                        FabricBlockEntityTypeBuilder.create(MoreLecternBlockEntity::new)
-                                .addBlocks(MlvBlockInit.more_lecterns.toArray(Block[]::new))
-                                .build());
     }
 
     private static void registerBlock(MoreLecternBlock lectern) {
