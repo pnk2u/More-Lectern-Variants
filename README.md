@@ -1,11 +1,11 @@
-# <img width='24' src="./src/main/resources/icon.png"> More Frame Variants
+# <img width='24' src="./src/main/resources/icon.png"> More Lectern Variants
 > ![Mod Icon](https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Lectern-Variants/pres/logo/logo_c.png)
 >
 > A simple mod adding wood variants for Minecraft's Lectern Block.
 
 ### Compatibility
 
-- Minecraft: `1.20.1`, `1.21(.1)`, `1.21.4`~`1.21.8`
+- Minecraft: `1.20.1`, `1.21(.1)`, `1.21.4`~`1.21.9`
 - Mod Loader: _Fabric_
 - Requires: [`Fabric API`](https://modrinth.com/mod/fabric-api)
 
@@ -14,8 +14,8 @@
 Currently available in:
 - English
 - German
-- Chinese, Simplified (@qiuqimc with PR #2, added in `1.8.1`)
-- Ukrainian (@StarmanMine142 with PR #4 and #5, added in `1.8.2`)
+- Chinese, Simplified (@[qiuqimc](/../../../../qiuqimc) with [PR #2](../../pull/2), added in [`1.8.1`](/../../#181))
+- Ukrainian (@[StarmanMine142](/../../../../StarmanMine142) with [PR #4](../../pull/4)/[5](../../pull/5), added in [`1.8.2`](/../../#182))
 
 Want to help translate? Feel free to open a PR to the **default branch (`1.21(.1)`)**.
 
@@ -69,6 +69,6 @@ Want to help translate? Feel free to open a PR to the **default branch (`1.21(.1
 
 #### Support/Contact
 - Suggestions? Questions? Bug reports?  
-  Feel free to [open an issue](https://github.com/pnk2u/More-Frame-Variants/issues)!  
+  Feel free to [open an issue](/../../issues)!  
   &nbsp;  
   You can also contact me via email at [contact@pnku.de](mailto:contact@pnku.de) or join the [Discord](https://dsc.lieonlion.dev) and contact me there.
