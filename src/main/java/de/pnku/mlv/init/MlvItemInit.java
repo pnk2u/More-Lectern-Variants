@@ -2,7 +2,7 @@ package de.pnku.mlv.init;
 
 import de.pnku.mlv.MoreLecternVariants;
 import de.pnku.mlv.block.MoreLecternBlock;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -53,6 +53,6 @@ public class MlvItemInit {
     private static void registerItem(BlockItem lectern, Item lecternAfter) {
         Registry.register(BuiltInRegistries.ITEM, MoreLecternVariants.withModId(((MoreLecternBlock) lectern.getBlock()).lecternWoodType + "_lectern"), lectern);
 
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> entries.addAfter(lecternAfter, lectern));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> entries.insertAfter(lecternAfter, lectern));
     }
 }
