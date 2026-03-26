@@ -4,9 +4,7 @@
 	"version": "${mod_version}",
 	"name": "${mod_name}",
 	"description": "${mod_description}",
-	"authors": [
-		"${mod_authors}"
-	],
+	"authors": ["${mod_author}"],
 	"contact": {
 		"homepage": "https://www.pnku.de",
 		"email": "contact@pnku.de",
@@ -14,7 +12,7 @@
 		"issues": "https://github.com/pnk2u/More-Lectern-Variants/issues"
 	},
 	"license": "${mod_license}",
-	"icon": "logo.png",
+	"icon": "icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
@@ -27,15 +25,22 @@
 	"accessWidener": "lolmlv.accesswidener" ,
 	"depends": {
 		"fabricloader": ">=${loader_version}",
-		"minecraft": ">=${minecraft_version_0} <${minecraft_version_1}",
-		"java": ">=17",
-		"fabric-api": ">=0.92.0"
+		"minecraft": ">${minecraft_version_0} <${minecraft_version_1}",
+		"java": ">=${java_version}",
+		"fabric-api": ">=0.100.0"
 	},
 	"custom": {
 		"modmenu": {
 			"links": {
-				"modmenu.discord": "https://dsc.lieonlion.dev"
+				"modmenu.discord": "https://discord.lieonlion.dev"
 			}
+		},
+		"mc-publish": {
+			"modrinth": "pLsa93bN",
+			"curseforge": "1058412",
+			"dependencies": [
+				"fabric-api(required)#(ignore)"
+			]
 		}
 	}
 }
