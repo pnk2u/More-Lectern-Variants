@@ -27,14 +27,6 @@ repositories {
 
 
 loom {
-	splitEnvironmentSourceSets()
-
-	mods {
-		"mlv" {
-			sourceSet sourceSets.main
-			sourceSet sourceSets.client
-		}
-	}
 	accessWidenerPath = file("src/main/resources/lolmlv.accesswidener")
 }
 
