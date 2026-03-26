@@ -1,4 +1,4 @@
-<!--publish=true-->
+<!--publish = true-->
 ### 1.9.1:
 - `26.1`: Update to `26.1`
 - Add Japanese translation (Thanks to [@HayaKoh-WeldyAlin](https://www.github.com/HayaKoh-WeldyAlin))
