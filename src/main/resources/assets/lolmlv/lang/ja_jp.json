@@ -1,0 +1,14 @@
+{
+  "block.lolmlv.spruce_lectern": "トウヒの書見台" ,
+  "block.lolmlv.birch_lectern": "シラカバの書見台" ,
+  "block.lolmlv.jungle_lectern": "ジャングルの書見台" ,
+  "block.lolmlv.acacia_lectern": "アカシアの書見台" ,
+  "block.lolmlv.dark_oak_lectern": "ダークオークの書見台" ,
+  "block.lolmlv.mangrove_lectern": "マングローブの書見台" ,
+  "block.lolmlv.cherry_lectern": "サクラの書見台" ,
+  "block.lolmlv.bamboo_lectern": "竹の書見台" ,
+  "block.lolmlv.crimson_lectern": "真紅の書見台" ,
+  "block.lolmlv.warped_lectern": "歪んだ書見台",
+  "block.lolmlv.pale_oak_lectern": "ペールオークの書見台" ,
+  "resourcePack.lolmlv.mlecternv-quad-compat.description": "Quadとのクラフトレシピの互換性の問題を修正します。"
+}

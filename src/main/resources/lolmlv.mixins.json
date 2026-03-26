@@ -1,7 +1,7 @@
 {
   "required": true ,
   "package": "de.pnku.mlv.mixin" ,
-  "compatibilityLevel": "JAVA_21" ,
+  "compatibilityLevel": "JAVA_${java_version}" ,
   "mixins": [
     "BlockEntityTypeMixin" ,
     "PoiTypesAccessor"
