@@ -3,7 +3,7 @@
   "category": "misc",
   "group": "lectern",
   "key": {
-    "#": "minecraft:oak_slab",
+    "#": "#lolmlv:vanilla_lectern_slabs",
      "B": "#c:bookshelves"
         },
    "pattern":  [
