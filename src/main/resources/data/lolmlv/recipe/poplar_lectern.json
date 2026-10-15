@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "lectern",
+  "key": {
+    "#": "minecraft:poplar_slab",
+     "B": "#c:bookshelves"
+        },
+   "pattern":  [
+  "###",
+  " B ",
+  " # "
+ ],
+  "result": {
+    "count": 1,
+    "id": "lolmlv:poplar_lectern"
+  }
+}
