@@ -1,0 +1,18 @@
+{
+  "values": [
+    {"id": "#minecraft:wooden_slabs", "required": true},
+    "minecraft:oak_slab"
+  ],
+  "fabric:remove": [
+    "minecraft:acacia_slab",
+    "minecraft:bamboo_slab",
+    "minecraft:birch_slab",
+    "minecraft:cherry_slab",
+    "minecraft:crimson_slab",
+    "minecraft:dark_oak_slab",
+    "minecraft:jungle_slab",
+    "minecraft:mangrove_slab",
+    "minecraft:spruce_slab",
+    "minecraft:warped_slab"
+  ]
+}
