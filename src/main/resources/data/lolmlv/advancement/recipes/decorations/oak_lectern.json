@@ -15,9 +15,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:oak_slab"
-            ]
+            "items": "#lolmlv:vanilla_lectern_slabs"
           }
         ]
       },
@@ -42,7 +40,7 @@
   ],
   "rewards": {
     "recipes": [
-      "lolmlv:oak_lectern"
+      "lolmlv:vanilla_lectern_from_oak_recipe"
     ]
   },
   "sends_telemetry_event": false
