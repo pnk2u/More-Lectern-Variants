@@ -25,7 +25,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "lolmlv:dark_oak_lectern"
+        "recipes": "lolmlv:dark_oak_lectern"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

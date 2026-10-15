@@ -25,7 +25,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "lolmlv:acacia_lectern"
+        "recipes": "lolmlv:acacia_lectern"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

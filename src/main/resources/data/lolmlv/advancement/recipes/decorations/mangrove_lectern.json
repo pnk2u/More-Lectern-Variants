@@ -25,7 +25,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "lolmlv:mangrove_lectern"
+        "recipes": "lolmlv:mangrove_lectern"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

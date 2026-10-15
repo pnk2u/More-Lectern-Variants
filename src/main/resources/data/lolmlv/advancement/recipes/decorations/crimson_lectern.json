@@ -25,7 +25,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "lolmlv:crimson_lectern"
+        "recipes": "lolmlv:crimson_lectern"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

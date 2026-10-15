@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "lolmlv:vanilla_lectern_from_oak_recipe"
+        "recipes": "lolmlv:vanilla_lectern_from_oak_recipe"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

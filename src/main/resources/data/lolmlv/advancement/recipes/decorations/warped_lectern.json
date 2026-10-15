@@ -25,7 +25,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "lolmlv:warped_lectern"
+        "recipes": "lolmlv:warped_lectern"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

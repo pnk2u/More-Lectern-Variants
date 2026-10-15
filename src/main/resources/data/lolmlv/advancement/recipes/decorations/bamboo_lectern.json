@@ -25,7 +25,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "lolmlv:bamboo_lectern"
+        "recipes": "lolmlv:bamboo_lectern"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
