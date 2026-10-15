@@ -4,17 +4,17 @@
   "group": "lectern",
   "key": {
     "#": {
-      "item": "minecraft:oak_slab"
+      "tag": "lolmlv:vanilla_lectern_slabs"
     },
-     "B": {
-       "tag": "c:bookshelves"
-     }
-        },
-   "pattern":  [
-  "###",
-  " B ",
-  " # "
- ],
+    "B": {
+      "tag": "c:bookshelves"
+    }
+  },
+  "pattern":  [
+    "###",
+    " B ",
+    " # "
+  ],
   "result": {
     "count": 1,
     "item": "minecraft:lectern"
